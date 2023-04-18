@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 로그인 화면과 회원가입 화면. 시작 시 로그인 화면이 보이며, 회원가입 버튼(Resister) 누를 시 화면 구성 변경 -->
+<!-- Forgot ID/PW 클릭 시 ID/PW찾기 화면으로 넘어감 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/loginLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="65dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/threeleft" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/rounded_corner_layout"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/loginbt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="1dp"
+                android:backgroundTint="#39393D"
+                android:text="Log in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/resisterbt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="#262629"
+                android:text="Resister"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="User ID"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/idET1"
+            android:layout_width="350dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="you@example.com"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/pwTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="Password"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/pwEt1"
+            android:layout_width="350dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="Your Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/singInbt1"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#CD475F"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/forgotTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="23dp"
+            android:text="Forgot ID/PW?"
+            android:textColor="#CD475F"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resisterLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="65dp"
+            app:srcCompat="@drawable/threeleft" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/rounded_corner_layout"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/loginbt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="1dp"
+                android:backgroundTint="#262629"
+                android:text="Log in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/resisterbt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="#39393D"
+                android:text="Resister"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="User ID"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/idET2"
+            android:layout_width="345dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="you@example.com"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/pwTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="Password"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/pwEt2"
+            android:layout_width="345dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="Your Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/pwCheckTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="Password"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/pwCheckEt1"
+            android:layout_width="345dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="Check Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        <TextView
+            android:id="@+id/nameTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="Name"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/nameEt1"
+            android:layout_width="345dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="Yout Name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        <TextView
+            android:id="@+id/birthTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="23dp"
+            android:text="Birth"
+            android:textColor="#6A6A6A" />
+
+        <EditText
+            android:id="@+id/birthEt1"
+            android:layout_width="345dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:background="#575758"
+            android:backgroundTint="#262629"
+            android:hint="ex) 990101"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#575758"
+            android:textCursorDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/singUpbt1"
+            android:layout_width="345dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#CD475F"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

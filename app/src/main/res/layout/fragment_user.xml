@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--유저 정보 화면. 비밀번호 변경, 정보 확인, 로그아웃-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserFragment"
+    android:background="@color/black">
+
+
+     <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="내 정보"
+            android:textSize="28dp"
+            android:gravity="center_horizontal"
+            android:textColor="#3fca7f"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:text="UserName"
+                android:textColor="#3fca7f"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:id="@+id/user_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:text="UserName"
+                android:textColor="#3ffa7f"
+                android:textSize="16dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#EEE"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:text="계정관리"
+                android:textColor="#FFF"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="비밀번호 변경"
+                android:textColor="#FFF"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정보"
+                android:textColor="#FFF"
+                android:textSize="18dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_change_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="217dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+
+            <ImageView
+                android:id="@+id/iv_info_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="217dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#999"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="로그아웃"
+            android:textColor="#FF0000"
+            android:textSize="18dp"
+            />
+
+        <ImageView
+            android:id="@+id/logoutIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_logout_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pw_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/tv_current_check_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="현재 비밀번호 확인 "
+            android:textColor="#FFF"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_current_check_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#777"
+            android:textColor="#FFF"
+            android:ems="9" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_check_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:text="확인"
+        android:ems="8"
+        android:backgroundTint="#333"
+        android:visibility="invisible"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/pw_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/tv_change_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="비밀번호 변경         "
+            android:textColor="#FFF"
+            android:textSize="18dp"
+            />
+
+        <EditText
+            android:id="@+id/et_change_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:textColor="#FFF"
+            android:backgroundTint="#aaa"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pw_layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/tv_check_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="비밀번호 확인         "
+            android:textColor="#FFF"
+            android:textSize="18dp"
+            />
+
+        <EditText
+            android:id="@+id/et_check_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:textColor="#FFF"
+            android:backgroundTint="#888"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_change_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:text="비밀변호 변경"
+        android:textColor="#FFF"
+        android:ems="21"
+        android:backgroundTint="#CD475F"
+        android:visibility="invisible"
+        />
+
+</LinearLayout>

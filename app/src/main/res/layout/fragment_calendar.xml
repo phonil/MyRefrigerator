@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--달력 넣어 직관적으로 날짜 선택, 파악 가능하도록 하였음.
+ 날짜 선택 시 그 날 섭취 음식과 칼로리 확인 가능, 음식 검색 후 칼로리 계산 받고 날짜에 입력 또한 가능-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalendarFragment"
+    android:background="#000">
+
+    <!-- TODO: Update blank fragment layout -->
+    <CalendarView
+        android:id="@+id/calendarView_frag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:focusedMonthDateColor="#3ffa7f"
+        android:unfocusedMonthDateColor="#fafafa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/Food_Name_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="6"
+                    android:inputType="textPersonName"
+                    android:hint="음식명"
+                    android:textColorHint="#aaa"
+                    android:backgroundTint="#aaa"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/CheckButton"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_search_24_r"
+                    android:backgroundTint="#000"
+                    style="?android:attr/borderlessButtonStyle"
+                    />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cal_text"
+                        android:layout_width="165dp"
+                        android:layout_height="50dp"
+                        android:textSize="16dp"
+                        android:hint="000kcal"
+                        android:textColorHint="#aaa"
+                        android:textColor="#fff" />
+
+                    <EditText
+                        android:id="@+id/eat_qty_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="8"
+                        android:inputType="textPersonName"
+                        android:hint="(개 / 인분)"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:backgroundTint="#777"
+                        android:textColorHint="#aaa"
+                        />
+
+                    <Button
+                        android:id="@+id/CheckButton02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:text="단위 입력 완료"
+                        android:backgroundTint="#CD475F"/>
+
+                    <TextView
+                        android:id="@+id/eat_cal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="8"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint="섭취한 칼로리"
+                        android:textColorHint="#aaa"
+                        android:backgroundTint="#aaa"
+                        android:textSize="16dp"
+                        android:textColor="#fff" />
+
+                    <Button
+                        android:id="@+id/add_db_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="달력에 추가"
+                        android:backgroundTint="#CD475F"
+                        android:ems="10"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/bigTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="오늘 섭취량"
+                    android:textColor="#abcedf"
+                    android:textSize="17dp"
+                    />
+
+                <Button
+                    android:id="@+id/Clear_DB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/ic_baseline_event_busy_24"
+                    android:backgroundTint="#000"
+                    android:text="초기화"
+                    android:textColor="#CD475F"
+                    style="?android:attr/borderlessButtonStyle"
+                    />
+
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/bigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="0.0kcal"
+                        android:textColor="#FFF"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

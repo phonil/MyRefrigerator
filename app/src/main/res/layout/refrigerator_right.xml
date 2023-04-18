@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--냉동실 화면. 정보 입력 후 추가 시 반영 / 롱클릭 시 삭제 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="냉동실"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#FFF"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="재료명"
+            android:textColorHint="#aaa"
+            android:textSize="16dp"
+            android:textColor="#FFF"
+            android:backgroundTint="#aaa"
+            android:ems="4"
+            />
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="수량"
+            android:textColorHint="#aaa"
+            android:textSize="12dp"
+            android:textColor="#ccc"
+            android:backgroundTint="#fff"
+            android:ems="5"
+            />
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:hint="유통기한"
+            android:textColorHint="#aaa"
+            android:textSize="12dp"
+            android:textColor="#ccc"
+            android:backgroundTint="#fff"
+            android:ems="5"
+            />
+
+        <EditText
+            android:id="@+id/et_where"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="메모"
+            android:textColorHint="#aaa"
+            android:textColor="#ccc"
+            android:textSize="12dp"
+            android:backgroundTint="#fff"
+            android:ems="5"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="44dp"
+            android:text="재료명"
+            android:textSize="16dp"
+            android:textColor="#FFF"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="56dp"
+            android:text="수량"
+            android:textSize="12dp"
+            android:textColor="#ccc"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:text="유통기한"
+            android:textSize="12dp"
+            android:textColor="#ccc"
+            />
+
+        <Button
+            android:id="@+id/bt_add_ingredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가"
+            android:drawableLeft="@drawable/ic_baseline_add_24"
+            android:textColor="#CD475F"
+            android:backgroundTint="#000"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#aaa"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_refrigerator_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbars="vertical"
+        android:layout_weight="1"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 홈 화면이자 메인 화면. 하단 바로 Fragment 간 이동 가능, 장바구니, 냉장고로 들어가기 가능-->
+<!-- ViewPager로 음식 사진을 통해 음식 추천 기능 구현. 디자인과 옆으로 넘겨보기 편하게 하고자 함-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#000"
+    >
+    <!--android:background="@drawable/gradation_"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/userName_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Hello, User"
+                        android:textColor="#CD475F"
+                        android:textSize="37dp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:text="My Refrigerator"
+                        android:textColor="#D1789D"
+                        android:textSize="27dp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btBaguni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="장보기"
+                    android:drawableTop="@drawable/ic_baseline_add_shopping_cart_24p"
+                    android:backgroundTint="#000"
+                    style="?android:attr/borderlessButtonStyle"
+                    />
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_marginLeft="23dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+               >
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="301dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="냉장실"
+                    android:textColor="#8FE4EF"
+                    android:textSize="26dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="133dp"
+                    android:text="냉동실"
+                    android:textColor="#8FE4EF"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="26dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="170dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="#000"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="#afe3ff"
+                    app:strokeWidth="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="24dp"
+                        android:text="  냉장실 온도는 \n    3~4도가 적당합니다."
+                        android:textColor="#afe3ff"
+                        android:textSize="16dp"
+                        />
+
+                    <Button
+                        android:id="@+id/bt_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"
+                        android:backgroundTint="#000"
+                        android:textColor="#576FFD"
+                        android:textSize="28dp"
+                        android:text="GO!"
+                        android:textStyle="bold"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="170dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="#000"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="#afe3ff"
+                    app:strokeWidth="1dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="24dp"
+                        android:text="냉동실 온도는 \n -18~20도가 적당합니다."
+                        android:textColor="#afe3ff"
+                        android:textSize="16dp"
+                        />
+
+                    <Button
+                        android:id="@+id/bt_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000"
+                        android:textColor="#576FFD"
+                        android:textSize="28dp"
+                        android:text="GO!"
+                        android:textStyle="bold"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

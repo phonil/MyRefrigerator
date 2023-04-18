@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/pageMarginAndOffset"
+        android:layout_marginRight="@dimen/pageMarginAndOffset"
+        android:layout_height="@dimen/frameSize"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginBottom="8dp"
+            android:id="@+id/imgBanner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffcccc"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/chi_1"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
